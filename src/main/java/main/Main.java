@@ -169,7 +169,7 @@ public class Main implements Runnable {
         }
 
         long time = System.nanoTime();
-        int chunkX = 8;     //floor(128 / 16)
+        int chunkX = 8;     //floor(129 / 16)
         int chunkZ = -3;
         long cur = 0;
         long tot = worldSeeds.size();
