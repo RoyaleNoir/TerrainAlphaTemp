@@ -156,7 +156,7 @@ public class Main implements Runnable {
 
     public void run() {
         int[] mapWat = {77, 78, 77, 75}; // from z 12 to z15 in chunk
-        int OFFSET = 12;
+        int OFFSET = 14;   //(-28 - 6) % 16
         List<Long> worldSeeds = null;
         long id = Thread.currentThread().getId();
         try {
@@ -169,7 +169,7 @@ public class Main implements Runnable {
         }
 
         long time = System.nanoTime();
-        int chunkX = ((index + 16) >> 4) - 1;
+        int chunkX = 8;     //floor(128 / 16)
         int chunkZ = -3;
         long cur = 0;
         long tot = worldSeeds.size();
@@ -207,7 +207,7 @@ public class Main implements Runnable {
                     }
                 }
                 if (flag) {
-                    System.out.println("Seed " + seed + " at x:" + (chunkX * 16 + x) + " z:-30");
+                    System.out.println("Seed " + seed + " at x:" + (chunkX * 16 + x) + " z:-28");
                 }
             }
 
